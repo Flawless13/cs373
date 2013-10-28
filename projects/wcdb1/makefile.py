@@ -22,5 +22,10 @@ Models.html: Models.py
 WCDB1.log:
 	git log > WCDB1.log
 
-WCDB1.zip: makefile apiary.apib Models.html Models.py WCDB1.log WCDB1.pdf
-	zip -r WCDB1.zip makefile apiary.apib Models.py WCDB1.log WCDB1.pdf
+WCDB1.zip: makefile apiary.apib  \
+           Models.html Models.py \
+           WCDB1.log WCDB1.pdf
+	zip -r WCDB1.zip             \
+	       makefile apiary.apib  \
+	       Models.html Models.py \
+	       WCDB1.log WCDB1.pdf

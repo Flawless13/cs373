@@ -26,5 +26,12 @@ WCDB2.log:
 
 # add other .html and .py files
 
-WCDB2.zip:           Models.html Models.py TestWCDB2.out TestWCDB2.py WCDB2.log WCDB2-Report.pdf WCDB2-UML.pdf
-	zip -r WCDB2.zip Models.html Models.py TestWCDB2.out TestWCDB2.py WCDB2.log WCDB2-Report.pdf WCDB2-UML.pdf
+WCDB2.zip: makefile apiary.apib                     \
+           Models.html Models.py                    \
+           TestWCDB2.out TestWCDB2.py               \
+           WCDB2.log WCDB2-Report.pdf WCDB2-UML.pdf
+	zip -r WCDB2.zip \
+	       makefile apiary.apib                     \
+	       Models.html Models.py                    \
+	       TestWCDB2.out TestWCDB2.py               \
+	       WCDB2.log WCDB2-Report.pdf WCDB2-UML.pdf
