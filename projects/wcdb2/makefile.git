@@ -1,0 +1,20 @@
+cs:
+
+config:
+	git config -l
+
+count:
+	ls -al | grep "\.apib"        | wc
+	ls -al | grep "TestWCDB2.c++" | wc
+	ls -al | grep "TestWCDB2.out" | wc
+
+log:
+	git log
+
+pull:
+	git pull
+
+status:
+	git branch
+	git remote
+	git status
