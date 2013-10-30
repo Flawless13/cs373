@@ -168,7 +168,6 @@ ID of students who have applied to major in CS but not in EE
 select "ID of students who have applied to major in CS but not in EE";
 
 select "this is not right, why?";
-# includes students majoring in CS in more than one place
 # includes students majoring in non-CS, non-EE
 
 select *

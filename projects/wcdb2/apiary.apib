@@ -167,15 +167,13 @@ Lists the people in the database
 GET /api/people
 < 200
 < Content-Type: application/json
-{
-    "people": [
-        {
-            "name": "Al Gore",
-            "id": 1,
-            "kind": "Vice President"
-        }
-    ],
-}
+[
+    {
+        "name": "Al Gore",
+        "id": 1,
+        "kind": "Vice President"
+    }
+]
 
 Displays the information for a specific crisis,
 id is the database primary key
@@ -240,11 +238,11 @@ PUT /api/people/{id}
 < 204
 
 Delete an existing person
-DELETE /api/person/{id}
+DELETE /api/people/{id}
 < 204
 
 List all related organizations
-GET /api/crises/{id}/organizations
+GET /api/people/{id}/organizations
 < 200
 < Content-Type: application/json
 [
@@ -269,7 +267,7 @@ GET /api/crises/{id}/organizations
 ]
 
 List all related crises
-GET /api/crises/{id}/crises
+GET /api/people/{id}/crises
 < 200
 < Content-Type: application/json
 [
@@ -298,7 +296,7 @@ GET /api/crises/{id}/crises
 Organization Data
 --
 Lists the people in the database
-GET /api/orgs
+GET /api/organizations
 < 200
 < Content-Type: application/json
 [
@@ -311,7 +309,7 @@ GET /api/orgs
 
 Displays the information for a specific organization,
 id is the database primary key
-GET /api/orgs/{id}
+GET /api/organizations/{id}
 < 200
 < Content-Type: application/json
 {
@@ -336,7 +334,7 @@ GET /api/orgs/{id}
 }
 
 Create a new entry for an organization
-POST /api/orgs
+POST /api/organizations
 > Content-Type: application/json
 {
     "name": "FEMA",
@@ -361,7 +359,7 @@ POST /api/orgs
 { id: 1 }
 
 Update an existing organization
-PUT /api/orgs/{id}
+PUT /api/organizations/{id}
 > Content-Type: application/json
 {
     "name": "FEMA",
@@ -384,11 +382,11 @@ PUT /api/orgs/{id}
 < 204
 
 Delete an existing organization
-DELETE /api/orgs/{id}
+DELETE /api/organizations/{id}
 < 204
 
 List all related crises
-GET /api/crises/{id}/crises
+GET /api/organizations/{id}/crises
 < 200
 < Content-Type: application/json
 [
@@ -414,7 +412,7 @@ GET /api/crises/{id}/crises
 ]
 
 List all related people
-GET /api/crises/{id}/people
+GET /api/organizations/{id}/people
 < 200
 < Content-Type: application/json
 [
