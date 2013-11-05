@@ -371,7 +371,7 @@ select distinct cName
         5;
 
 /* -----------------------------------------------------------------------
-colleges with fewer than 5 applicatants
+colleges with fewer than 5 applicants
 */
 
 select cName, count(distinct sID)
